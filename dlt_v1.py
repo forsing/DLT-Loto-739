@@ -55,9 +55,9 @@ except ImportError as exc:
 
 
 DEFAULT_FILES = (
-    "/Users/4c/Desktop/GHQ/data/loto7_4704_k83.csv",
-    "/Users/4c/Desktop/GHQ/data/loto7_4704_k83_loto_2974.csv",
-    "/Users/4c/Desktop/GHQ/data/loto7_4704_k83_loto_plus_1730.csv",
+    "/data/loto7_4704_k83.csv",
+    "data/loto7_4704_k83_loto_2974.csv",
+    "/data/loto7_4704_k83_loto_plus_1730.csv",
 )
 
 SEQUENCE = 20
@@ -1233,7 +1233,7 @@ Prognoze potpuno u jednoj polovini: 0
     Transformer: epoha 10/18
     Transformer: epoha 15/18
 
-FINALNI NEXT: 4, 8, 18, 23, 30, 31, 35
+FINALNI NEXT: 4, x, 18, y, 30, z, 35
 Modelski skor za rangiranje: -1.60017151
 Ocenjenih različitih kandidata: 2480
 Najduži uzastopni niz: 2
@@ -1319,7 +1319,7 @@ Prognoze potpuno u jednoj polovini: 0
     Transformer: epoha 10/17
     Transformer: epoha 15/17
 
-FINALNI NEXT: 4, 7, 16, 18, 23, 34, 35
+FINALNI NEXT: 4, x, 16, y, 23, z, 35
 Modelski skor za rangiranje: -1.58254398
 Ocenjenih različitih kandidata: 2222
 Najduži uzastopni niz: 2
@@ -1425,7 +1425,7 @@ Prognoze potpuno u jednoj polovini: 0
     Transformer: epoha 20/29
     Transformer: epoha 25/29
 
-FINALNI NEXT: 1, 10, 11, 18, 23, 32, 35
+FINALNI NEXT: 1, x, 11, y, 23, z, 35
 Modelski skor za rangiranje: -1.59879089
 Ocenjenih različitih kandidata: 2248
 Najduži uzastopni niz: 2
@@ -1436,9 +1436,9 @@ Pretraga je deterministička i heuristička.
 
 ============================================================================
 ZAVRŠNI NEXT PREGLED
-loto7_4704_k83.csv: 4, 8, 18, 23, 30, 31, 35
-loto7_4704_k83_loto_2974.csv: 4, 7, 16, 18, 23, 34, 35
-loto7_4704_k83_loto_plus_1730.csv: 1, 10, 11, 18, 23, 32, 35
+loto7_4704_k83.csv: 4, x, 18, y, 30, z, 35
+loto7_4704_k83_loto_2974.csv: 4, x, 16, y, 23, z, 35
+loto7_4704_k83_loto_plus_1730.csv: 1, x, 11, y, 23, z, 35
 """
 
 
@@ -1446,7 +1446,7 @@ loto7_4704_k83_loto_plus_1730.csv: 1, 10, 11, 18, 23, 32, 35
 """
 Spajanje više strategija za stvaranje i rangiranje kandidata, uz neuronski ansambl: 
 LSTM, Transformer i pojednostavljena mreža sa pažnjom nazvana TabNet.
-Ovde se posebno obrađuju vremenske sekvence i spajaju ocene više strategija.
+Ovde se spajaju ocene više strategija.
 
 - Jedna kombinacija 7/39, zasebno za svaki ceo CSV.
 - Distribucije.
